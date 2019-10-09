@@ -1,35 +1,33 @@
-HUGO_VERSION := 0.58.3
+HUGO_VERSION  := "0.58.3"
+HUGO_FLAVOUR  := "hugo_extended"
+HUGO_BINARY   := "./hugo"
+HUGO_ENV      ?= "dev"
+OS            := "Linux"
+
 ifeq ($(shell uname),Darwin)
-	OS := macOS
-else
-	OS := Linux
+	OS := "macOS"
 endif
 
-.PHONY: clean
-clean:
-	rm -fr public
+build public: hugo
+	@ HUGO_ENV=$(HUGO_ENV) $(HUGO_BINARY)
 
-.PHONY: clobber
-clobber: clean
-	rm -fr hugo
-
-.PHONY: guard-%
 guard-%:
 	@ if [ "${${*}}" = "" ]; then \
-	    echo "Environment variable $* not set"; \
-	    exit 1; \
+			echo "Environment variable $* not set"; \
+			exit 1; \
 	fi
 
-hugo:
-	curl -LsS https://github.com/gohugoio/hugo/releases/download/v$(HUGO_VERSION)/hugo_$(HUGO_VERSION)_$(OS)-64bit.tar.gz | tar xzf - hugo
+clean clobber:
+	@ rm -fr public tmp
+	@ rm -fr hugo
 
-develop: hugo ## Start a development server
-	./hugo serve -D
+install hugo:
+	@ mkdir -p tmp
+	@ curl -LsS https://github.com/gohugoio/hugo/releases/download/v$(HUGO_VERSION)/$(HUGO_FLAVOUR)_$(HUGO_VERSION)_$(OS)-64bit.tar.gz | tar xzf - hugo
+	@ rm -rf tmp
 
-.PHONY: build
-build: public
+run develop: hugo
+	@ HUGO_ENV=$(HUGO_ENV) $(HUGO_BINARY) serve -D
 
-public: hugo ## Build the website
-	./hugo -b https://go-serverless-workshop.com/
 
-install: hugo ## Install dependencies (hugo)
+.PHONY: guard-% clean clobber install develop run public

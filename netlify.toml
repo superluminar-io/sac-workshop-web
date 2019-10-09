@@ -1,0 +1,35 @@
+publish = "public/"
+command = "make"
+
+[context.production.environment]
+HUGO_VERSION = "0.55.5"
+HUGO_ENV = "production"
+
+[context.deploy-preview.environment]
+HUGO_VERSION = "0.55.5"
+HUGO_ENV = "production"
+
+[[redirects]]
+  from = "/serverless"
+  to = "/services/serverless"
+  force = true
+
+[[redirects]]
+  from = "/services/aws-cloud-setups"
+  to = "/workshops/aws-cloud-setups"
+  force = true
+
+[[redirects]]
+  from = "/aws-cloud-setup"
+  to = "/workshops/aws-cloud-setups/"
+  force = true
+
+[[redirects]]
+  from = "/cloud-setup"
+  to = "/workshops/aws-cloud-setups/"
+  force = true
+
+[[redirects]]
+  from = "/aws"
+  to = "/workshops/aws-cloud-setups/"
+  force = true
