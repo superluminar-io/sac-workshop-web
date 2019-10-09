@@ -1,5 +1,5 @@
 ---
-title: Lab 1
+title: Lab 1 - URL Shortener
 weight: 15
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Lab 0
+title: Lab 0 - Init
 weight: 10
 ---
 
