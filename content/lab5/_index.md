@@ -1,19 +1,19 @@
 ---
-title: Lab 5 - Blue/Green Deployments
+title: Lab 5 - Blue/Green Deploy
 weight: 35
 ---
 
 **In this Lab we will**:
 
-- Implement blue/green deployments using some SAM shortcuts
+- Implement blue/green deployments using AWS SAM
 - Learn about Lambda versions and aliases
-- Learn about possible deployment types (blue/green vs. canary)
+- Learn about different deployment types (blue/green vs. canary)
 - Use Cloudwatch Alarms to check if a change is safe to deploy to production
 
 **You completed this lab if you**:
 
 - Have implemented [CodeDeploy blue/green deployment](https://docs.aws.amazon.com/codedeploy/latest/userguide/welcome.html#welcome-deployment-overview-blue-green) for at least one function
-- Watch a deployment in the [Code Deploy Console](https://eu-central-1.console.aws.amazon.com/codesuite/codedeploy/deployments?region=eu-central-1)
+- Watched a deployment in the [Code Deploy Console](https://eu-central-1.console.aws.amazon.com/codesuite/codedeploy/deployments?region=eu-central-1)
 
 ## Blue/Green Deployments with AWS SAM
 

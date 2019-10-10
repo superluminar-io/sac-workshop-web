@@ -23,7 +23,7 @@ Setting up a Cognito User Pool can be a bit tricky. In order to make it work, yo
 - Create a [AWS::Cognito::UserPoolClient](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html) and connect it to the user pool
 - Create an [Authorizer](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api-auth-object) on the API Gateway
 - [Use this authorizer](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#function-auth-object) with the functions you want to protect (maybe only `create-url` for now)
-- Have a close look to the CORS property `AllowHeaders` you defined earlier
+- Hint: Have a close look to the CORS property `AllowHeaders` you defined earlier
 
 ## Frontend Changes
 

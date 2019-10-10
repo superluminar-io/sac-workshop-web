@@ -5,7 +5,7 @@ weight: 25
 
 **In this Lab we will**:
 
-- Use DynamoDB Event Streams
+- Use [DynamoDB Streams](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Streams.html)
 - Create an additional function and DynamoDB table
 
 **You completed this lab if you**:
@@ -20,7 +20,7 @@ You have to:
 
 - Create a new function
 - Create a new DynamoDB table
-- Hook up the function to a DynamoDB stream [SAM example](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#dynamodb)
+- Hook up the function to a DynamoDB stream ([SAM example](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#dynamodb))
 - Fetch preview using e.g. https://github.com/ludbek/webpreview
 - Try it!
 

@@ -12,12 +12,12 @@ weight: 10
 **You completed this lab if you**:
 
 - Successfully deployed the `hello-world` function
-- Executed it once via the HTTP Endpoint (e.g via `curl`)
+- Executed it once via the HTTP Endpoint (e.g using `curl`)
 
 ## Setup
 
-In order to setup the development environment in your AWS Account you have to login to the [AWS Console](https://console.aws.amazon.com/) via your
-web browser. Please use the user and credentials you created earlier.
+In order to setup the development environment in your AWS Account you have to log into the [AWS Console](https://console.aws.amazon.com/) via your
+web browser. Use the user and credentials you created earlier.
 
 Create the Cloudformation stack including the Cloud9 IDE and deployment pipeline using the following template:
 ```
@@ -50,7 +50,7 @@ Try to figure out:
 
 ## Hello World Function
 
-To get a first impression of the involved AWS Components and the Web IDE we will deploy a simple `hello-world` function. The function is already copy to your Cloud9 workspace.
+To get a first impression of the involved AWS Components and the Web IDE we will deploy a simple `hello-world` function. The function has already been copied to your Cloud9 workspace.
 
 Try to figure out:
 

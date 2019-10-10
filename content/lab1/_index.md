@@ -11,8 +11,8 @@ weight: 15
 
 **You completed this lab if you**:
 
-- Successfully deployed the `hello-world` function
-- Executed it once via the HTTP Endpoint (e.g via `curl`)
+- Shortened at least one URL
+- Typed the shortened URL into your browser and got redirected properly
 
 ## Implement a URL shortener using [DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html) for storage with two functions.
 
@@ -22,9 +22,9 @@ weight: 15
 Below you find an example interaction with your service:
 
 ```
-$ curl -v -XPOST -d '{"url": "https://superluminar.io"}' https://$ENDPOINT/create-url
+$ curl -v -XPOST -d '{"url": "https://superluminar.io"}' https://$ENDPOINT
 
-> POST /create-url HTTP/1.1
+> POST /short-url HTTP/1.1
 < HTTP/1.1 Created 201
 Created short url: https://$ENDPOINT/${short-id}
 
@@ -41,7 +41,7 @@ sequenceDiagram
     participant APIGateway
     participant Lambda
     participant DynamoDB
-    Browser->>APIGateway: POST /create-url
+    Browser->>APIGateway: POST /short-url
     APIGateway->>Lambda: Invoke
     Lambda->>DynamoDB: PutItem
     DynamoDB-->>Lambda: OK
@@ -51,7 +51,7 @@ sequenceDiagram
 
 ## Hints
 
-- Use the boto3 to [talk to DynamoDB](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/dynamodb.html)
+- Use boto3 to [use the DynamoDB API](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/dynamodb.html)
 - Create a DynamoDB table using AWS SAM (e.g [AWS::Serverless::SimpleTable](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-template.html#serverless-sam-template-simpletable))
 - Give your Lambda functions permissions to access the DynamoDB table with [SAM Policy Templates](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-policy-templates.html)
 - Inject the DynamoDB table via [environment variables](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#environment-object) into your [Lambda function](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#properties)

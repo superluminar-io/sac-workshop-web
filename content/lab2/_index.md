@@ -19,7 +19,7 @@ weight: 20
 We prepared a small React App (via [react-create-app](https://github.com/facebook/create-react-app)) that you can find 
 here on [github.com](https://github.com/superluminar-io/sac-workshop-fe).
 
-For convenience we recommend that you a the following targets to your `Makefile`
+For convenience reasons we recommend that you add the following targets to your `Makefile`
 
 1. Create a S3 bucket for hosting the web app
 
@@ -64,11 +64,12 @@ The file `frontend/src/_aws-exports.js` must be renamed to `frontend/src/aws-exp
 ## CORS
 
 In order to call the API from within your Browser (JavaScript), you need to enable CORS handling in the API Gateway.
-To read more about what CORS is all about find a good explanation at [Mozillas Developer Docs](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS).
+To read more about what CORS is all about: you can find a good explanation at [Mozillas Developer Docs](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS).
 
 To configure CORS settings with the API Gateway, you need to 
 
-- explicitly create a [AWS::Serverless::Api](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapi)
+- explicitly create a [AWS::Serverless::Api](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapi) 
+(until now this happened implicitly, because we where using [Event Source Type API](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api))
 - configure your function to make use of this API (see: `RestApiId` property of [API Event Type](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api))
 - set `AllowMethods`, `AllowHeaders` and `AllowOrigin` in the [Cors Configuration](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#cors-configuration)
 

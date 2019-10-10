@@ -27,3 +27,8 @@ Below you can find links on serveral Serverless topics.
 
  - [Last week in AWS](https://lastweekinaws.com/)
  - [Off-by-None](https://www.jeremydaly.com/newsletter/)
+
+## Technical Docs
+
+- [Python Lambda Handler](https://docs.aws.amazon.com/lambda/latest/dg/python-programming-model-handler-types.html)
+- [AWS SAM Specs](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md)
