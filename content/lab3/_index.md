@@ -21,7 +21,7 @@ You have to:
 - Create a new function
 - Create a new DynamoDB table
 - Hook up the function to a DynamoDB stream ([SAM example](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#dynamodb))
-- Fetch preview using e.g. https://github.com/ludbek/webpreview
+- Fetch preview using e.g. https://github.com/aakash4525/py_link_preview
 - Try it!
 
 ## Hints

@@ -59,7 +59,8 @@ deploy-frontend: fe-bucket
 
 **Attention**
 
-The file `frontend/src/_aws-exports.js` must be renamed to `frontend/src/aws-exports.js` and the API endpoint needs to be configured.
+The file `frontend/src/_aws-exports.js` must be renamed to `frontend/src/aws-exports.js` and the API endpoint needs
+to be configured (including the stage `https://SOME_ID.execute-api.eu-central-1.amazonaws.com/Prod`).
 
 ## CORS
 
@@ -74,5 +75,5 @@ To configure CORS settings with the API Gateway, you need to
 - set `AllowMethods`, `AllowHeaders` and `AllowOrigin` in the [Cors Configuration](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#cors-configuration)
 
 ## Hints
-
-You can find an example implementation here: https://github.com/superluminar-io/sac-workshop/compare/lab1..lab2?expand=1
+- Explicitly creating an `AWS::Serverless::Api` leads to a new API Gateway. This means the URL will change!
+- You can find an example implementation here: https://github.com/superluminar-io/sac-workshop/compare/lab1..lab2?expand=1
