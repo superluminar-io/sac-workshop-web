@@ -6,7 +6,7 @@ weight: 5
 To get started with the workshop you need to have **Administrator Access** to an AWS Account. Please do not use the 
 accounts root user since this is bad practice and leads to potential security risks.
 
-We recommend you create a dedicate IAM user following [this guide](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html#id_users_create_console). 
+We recommend you create a dedicate IAM user following [this guide](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html).
 
 ## Required software
 
