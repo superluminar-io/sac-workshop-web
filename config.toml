@@ -1,6 +1,6 @@
 theme = "hugo-theme-learn"
 languageCode = "en-us"
-title = "superluminar - Go Serverless Workshop"
+title = "superluminar - Serverless Workshop"
 
 [params]
 editURL = "https://github.com/superluminar-io/sac-workshop-web/edit/master/content/"
