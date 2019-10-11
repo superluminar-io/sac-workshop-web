@@ -8,11 +8,14 @@ weight: 10
 - Setup the development environment
 - Create our deployment pipeline
 - Deploy a simple `hello-world` function
+- Find logs and metrics for the function
 
 **You completed this lab if you**:
 
 - Successfully deployed the `hello-world` function
 - Executed it once via the HTTP Endpoint (e.g using `curl`)
+- Extended the function to generate some log output and found it in *Cloudwatch Logs*
+- Took a look at the Dashboards for you function
 
 ## Setup
 
