@@ -24,10 +24,10 @@ web browser. Use the user and credentials you created earlier.
 
 Create the Cloudformation stack including the Cloud9 IDE and deployment pipeline using the following template:
 ```
-https://sac-workshop-eu-central-1-init.s3.eu-central-1.amazonaws.com/initial.template
+https://serverless-workshop-eu-central-1-init.s3.eu-central-1.amazonaws.com/initial.template
 ```
 
-Or simply click this button to launch the stack: [<img src="https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png">](https://console.aws.amazon.com/cloudformation/home?region=eu-central-1#/stacks/new?stackName=sac-workshop&templateURL=https://sac-workshop-eu-central-1-init.s3.eu-central-1.amazonaws.com/initial.template)
+Or simply click this button to launch the stack: [<img src="https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png">](https://console.aws.amazon.com/cloudformation/home?region=eu-central-1#/stacks/new?stackName=serverless-workshop&templateURL=https://serverless-workshop-eu-central-1-init.s3.eu-central-1.amazonaws.com/initial.template)
 
 ## Cloudformation Stacks
 
