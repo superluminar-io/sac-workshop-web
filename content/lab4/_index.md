@@ -36,4 +36,4 @@ In order to connect the frontend with Cognito and allow sign-in / sign-up, we ne
 ## Hints
 
 - You can find an example implementation here: https://github.com/superluminar-io/sac-workshop/compare/lab3..lab4?expand=1
-- Changes to the Frontend App (revert): https://github.com/superluminar-io/sac-workshop-fe/commit/5bbb8c9fab7705b3954f86d34981078b8e52261c
+- Changes to the Frontend App: https://github.com/superluminar-io/serverless-workshop-fe/compare/5bbb8c9fab7705b3954f86d34981078b8e52261c..628bb6dc9c0e8e792c289954b0b076cda400afbc
